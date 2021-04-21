@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selenide demo</title>
+    <style type="text/css" >
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="greetings">...</p>
+    </div>
+    <script type="application/javascript">
+        "use strict"
+        function getUserName() {
+            let name = prompt("Hello guest! How i can call you?");
+            return name ? name : getUserName();
+        }
+        let name = getUserName();
+        let element = document.getElementById("greetings");
+        element.textContent = "Hello dear " + name + " ! I wish you a great day!";
+    </script>
+</body>
+</html>
